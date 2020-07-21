@@ -17,8 +17,11 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('user/', include('dev测试新增冲突')),
     path('user/', include('dev测试新增冲突11')),
+<<<<<<< HEAD
 
     path('user/', include('master冲突测试')),
+=======
+>>>>>>> dev
 
     # media文件夹路径打开了
     re_path('media/(?P<path>.*)', serve,{'document_root':settings.MEDIA_ROOT}),

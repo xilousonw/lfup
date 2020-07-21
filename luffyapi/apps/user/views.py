@@ -4,3 +4,5 @@ from django.shortcuts import render
 
 def test():
     print("test")
+    print('dev--test')
+
