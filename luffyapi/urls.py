@@ -15,6 +15,8 @@ urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('home/', include('home.urls')),
     path('user/', include('user.urls')),
+    path('user/', include('dev测试新增冲突')),
+    path('user/', include('dev测试新增冲突11')),
 
     path('user/', include('master冲突测试')),
 
