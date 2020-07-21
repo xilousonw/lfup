@@ -15,6 +15,7 @@ urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('home/', include('home.urls')),
     path('user/', include('user.urls')),
+    path('user/', include('dev测试新增冲突')),
 
     # media文件夹路径打开了
     re_path('media/(?P<path>.*)', serve,{'document_root':settings.MEDIA_ROOT}),
