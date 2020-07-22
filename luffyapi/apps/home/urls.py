@@ -1,11 +1,10 @@
-
-from django.urls import path,re_path,include
+from django.urls import path, re_path, include
 from . import views
 
-from rest_framework.routers import  SimpleRouter
+from rest_framework.routers import SimpleRouter
 
-router=SimpleRouter()
-router.register('banner',views.BannerView,'banner')
+router = SimpleRouter()
+router.register('banner', views.BannerView, 'banner')
 urlpatterns = [
     # path('banner/', views.BannerView.as_view()),
     path('', include(router.urls)),
