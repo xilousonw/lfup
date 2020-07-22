@@ -216,3 +216,12 @@ CORS_ALLOW_HEADERS = (
 	'authorization',
 	'content-type',
 )
+
+
+
+import datetime
+JWT_AUTH = {
+    # 过期时间7天
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
+
+}

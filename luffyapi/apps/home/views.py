@@ -21,8 +21,10 @@ path('', include(router.urls)),
 '''
 from django.conf import settings
 class BannerView(GenericViewSet,ListModelMixin):
+
     # 无论有多少条待展示的数据，最多就展示3条
     queryset = models.Banner.objects.filter(is_delete=False,is_show=True).order_by('display_order')[:settings.BANNER_COUNTER]
     serializer_class = serializer.BannerModelSerilaizer
+
 
 
