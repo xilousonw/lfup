@@ -225,3 +225,9 @@ JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
 
 }
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_RATES':{
+        'sms':'1/m'  # key要跟类中的scop对应
+    }
+}
+
