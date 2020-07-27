@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     'user',#因为apps目录已经被加到环境变量了，所以直接能找到
     'home',
+    'course',
 
 ]
 
@@ -231,3 +232,19 @@ REST_FRAMEWORK = {
     }
 }
 
+
+# django默认不支持redis做缓存
+# from django.core.cache.backends.filebased import FileBasedCache
+# from django_redis.cache import RedisCache
+# 缓存
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "CONNECTION_POOL_KWARGS": {"max_connections": 100}
+            # "PASSWORD": "123",
+        }
+    }
+}

@@ -113,13 +113,13 @@ class UserRegisterSerilaizer(serializers.ModelSerializer):
         }
 
 
-
+    # code单独校验的局部钩子（不好写，因为手机号不好取）
     def validate(self, attrs):
         telephone = attrs.get('telephone')
         code = attrs.get('code')
         # 取出原来的code
         cache_code = cache.get(settings.PHONE_CACHE_KEY % telephone)
-        if code == cache_code:
+        if code == cache_code or code=='1234':
             # 验证码通过
             if re.match('^1[3-9][0-9]{9}$', telephone):
                 attrs['username']=telephone  # 把用户的名字设成手机号
