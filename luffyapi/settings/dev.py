@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     # 为模型通过版本控制，可以回滚数据
     'reversion',
-
+    'django_filters',
 
     'user',#因为apps目录已经被加到环境变量了，所以直接能找到
     'home',

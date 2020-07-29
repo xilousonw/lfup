@@ -46,3 +46,17 @@ class CourseModelSerializer(serializers.ModelSerializer):
         #           'level_name',
         #           'course_sections'
         #           ]
+
+
+
+
+class CourseSectionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=models.CourseSection
+        fields=['name','orders','duration','free_trail','section_link','section_type_name']
+class CourseChapterSerializer(serializers.ModelSerializer):
+    # 子序列化的方式
+    coursesections=CourseSectionSerializer(many=True)
+    class Meta:
+        model=models.CourseChapter
+        fields=['name','summary','chapter','coursesections']
