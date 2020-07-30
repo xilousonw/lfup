@@ -24,6 +24,7 @@ class PayView(GenericViewSet,CreateModelMixin):
         return Response(serializer.context.get('pay_url'))
 
 
+
 class SuccessView(APIView):
     def get(self,request,*args,**kwargs):
         out_trade_no=request.query_params.get('out_trade_no')
@@ -39,7 +40,8 @@ class SuccessView(APIView):
         '''
         from luffyapi.libs.al_pay import alipay
         from luffyapi.utils.logger import log
-        data = request.data
+        # 注意这个小细节,把他转成字典
+        data = request.data.dict()
         out_trade_no=data.get('out_trade_no',None)
         gmt_payment=data.get('gmt_payment',None)
         signature = data.pop("sign")

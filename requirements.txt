@@ -1,0 +1,14 @@
+
+celery==4.4.6
+Django==2.0.7
+django-cors-headers==3.4.0
+django-filter
+django-redis
+djangorestframework==3.11.0
+djangorestframework-jwt==1.11.0
+Pillow==7.2.0
+PyMySQL==0.9.3
+python-alipay-sdk==2.0.1
+redis==3.5.3
+xadmin @ https://codeload.github.com/sshwsfc/xadmin/zip/django2
+
