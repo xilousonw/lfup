@@ -5,7 +5,7 @@ django-cors-headers==3.4.0
 django-filter
 django-redis
 qcloudsms_py
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 Pillow==7.2.0
 PyMySQL==0.9.3
