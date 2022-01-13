@@ -14,7 +14,7 @@ itypes==1.2.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
 pbr==5.4.5
-Pillow==7.1.2
+Pillow==9.0.0
 PyJWT==1.7.1
 PyMySQL==0.9.3
 pytz==2020.1
