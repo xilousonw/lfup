@@ -7,7 +7,7 @@ django-redis
 qcloudsms_py
 djangorestframework==3.11.0
 djangorestframework-jwt==1.11.0
-Pillow==7.2.0
+Pillow==9.3.0
 PyMySQL==0.9.3
 python-alipay-sdk==2.0.1
 redis==3.5.3
